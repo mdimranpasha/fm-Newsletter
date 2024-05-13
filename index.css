@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
+
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary-color:hsl(4,100%,67%);
+    --dark:hsl(234,29%,20%);
+    --black-dark:hsl(235,18%,26%);
+    --grey:hsl(231,7%,60%);
+    --white:hsl(0,0,100%);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: var(--black-dark);
+    font-family: "roboto",sans-serif;
+}
+
+.form_container{
+    background-color:white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+    width: 100%;
+    height: 100%;
+     
+    display: flex;
+    padding: 1.5rem;
+}
+.form_container.hide{
+    display: none;
+}
+
+
+.form_container .content{
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+     
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    /* background-color: aquamarine; */
+}
+.content h2{
+   font-size: 3rem; 
+   color: var(--black-dark);
+   margin:1rem 0 ;
+   
+}
+
+.content p{
+    font-size: 1rem;
+    font-family: inherit;
+}
+
+.content ul{
+    list-style: none;
+    margin: 1rem 0;
+    /* background-color: black; */
+}
+
+.content ul li{
+    margin:0.8rem 0 ;
+    /* background-color: aliceblue; */
+}
+
+.content ul li i{
+    background-color: var(--primary-color);
+    color:while;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    padding: 0.1rem;
+}
+
+.error{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content label{
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.content .error p{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color:var(--primary-color)
+}
+
+.content input{
+    width: 100%;
+    outline:none;
+    margin:0.5rem 0;
+    padding:0.9rem 0.5rem;
+    border-radius: 5px;
+    border:1px solid var(--black-dark);
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.content input.active{
+border: 1px solid var(--primary-color);
+}
+
+.content input.active::placeholder{
+    color: var(--primary-color);
+}
+
+.content button{
+    outline: none;
+  border: none;
+  margin: 1rem 0;
+
+  background-color: var(--black-dark);
+  color:white;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 0.9rem;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+
+}
+
+.content button:active{
+    transform: scale(0.98rem);
+}
+
+.content button:hover{
+    background-color: var(--primary-color);
+}
+.img_content{
+    width: 43%;
+
+}
+.img_content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* padding: 1rem; */
+}
+
+.success_message{
+    width: 450px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+    
+}
+.success_message h2{
+    font-size: 3rem;
+    margin: 1rem 0;
+    color: var(--black-dark);
+}
+
+.success_message p{
+    line-height: 1.5;
+}
+
+.success_message button{
+    outline: none;
+    border: none;
+    margin: 2rem 0;
+  
+    background-color: var(--primary-color);
+    color:white;
+    font-family: inherit;
+    font-size: 0.9rem;
+    padding: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+.success_message.hide{
+    display: none;
+}
+
+.success_message button:active{
+    transform: scale(0.98rem);
+}
+
+.success_message button:hover{
+    background-color: var(--primary-color);
+}
+
+@media(max-width:768px){
+    .form_container{
+        flex-direction: column-reverse;
+        padding: 0;
+        margin: 0;
+        height: 750px;
+    }
+
+    .content h2{
+        font-size: 2.4rem;
+        margin: 2rem 0;
+    }
+    .content {
+        display: flex;
+        width: 100%;
+    }
+
+    .img_content{
+        content: url("./assets/images/illustration-sign-up-mobile.svg");
+        width: 100%;
+    }
+    
+}
+/* Keep your existing styles */
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    margin-top: 20px; /* Adjust this value as needed */
+    color:white
+  }
+  
+.attribution a { color: hsl(228, 45%, 44%); }
+
+ 
